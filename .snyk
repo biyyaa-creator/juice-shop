@@ -1,0 +1,21 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MARSDB-480405:
+    - '*':
+        reason: >-
+          Belum ada patch dari upstream. marsdb hanya dipakai di data/mongodb.ts
+          sebagai database in-memory aplikasi latihan Juice Shop yang sengaja
+          rentan. Risiko diterima sementara dan dipantau lewat Snyk Monitor
+        expires: 2026-12-31T00:00:00.000Z
+        created: 2026-11-09T07:44:41.989Z
+  SNYK-JS-DECOMPRESS-20254116:
+    - '*':
+        reason: >-
+          Belum ada versi perbaikan dari upstream. Paket download dipakai di
+          lib/utils.ts, namun Juice Shop adalah aplikasi latihan yang sengaja
+          rentan. Risiko diterima sementara dan dipantau lewat Snyk Monitor
+        expires: 2026-12-31T00:00:00.000Z
+        created: 2026-11-09T07:43:36.862Z
+patch: {}
